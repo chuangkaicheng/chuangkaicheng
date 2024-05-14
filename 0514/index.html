@@ -31,6 +31,26 @@
   </div>
 </div>
 	<hr>
+	<h1>工具提示 (Tooltips)</h1>
+	<div class="container text-center">  
+  <img src="flowers3.jpg" width="70%" class="img-fluid"><br>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" 
+    data-bs-placement="top" title="太陽花">在上方顯示工具提示</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+    data-bs-placement="bottom" title="太陽花">在下方顯示工具提示</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+    data-bs-placement="left" title="太陽花">在左方顯示工具提示</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+    data-bs-placement="right" title="太陽花">在右方顯示工具提示</button>	
+</div>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  });
+</script>
+
 
 </body>
 </html>
